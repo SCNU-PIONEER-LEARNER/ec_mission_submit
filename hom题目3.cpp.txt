@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int yy(int a, int b)
+{
+	int fun = (a > b) ? a : b;
+
+	while(true)
+	{
+		if(fun% a == 0 && fun % b == 0)
+	{
+		
+		return fun;
+	}
+		++fun;
+	}
+}
+
+int main()
+{
+	int c, d;
+
+	cin >> c >> d;
+	int niu = yy(c, d);
+	cout << niu << endl;
+
+	return 0;
+}
