@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"light\startup_stm32f103xb.o"
+"light\main.o"
+"light\gpio.o"
+"light\tim.o"
+"light\stm32f1xx_it.o"
+"light\stm32f1xx_hal_msp.o"
+"light\stm32f1xx_hal_gpio_ex.o"
+"light\stm32f1xx_hal_tim.o"
+"light\stm32f1xx_hal_tim_ex.o"
+"light\stm32f1xx_hal.o"
+"light\stm32f1xx_hal_rcc.o"
+"light\stm32f1xx_hal_rcc_ex.o"
+"light\stm32f1xx_hal_gpio.o"
+"light\stm32f1xx_hal_dma.o"
+"light\stm32f1xx_hal_cortex.o"
+"light\stm32f1xx_hal_pwr.o"
+"light\stm32f1xx_hal_flash.o"
+"light\stm32f1xx_hal_flash_ex.o"
+"light\stm32f1xx_hal_exti.o"
+"light\system_stm32f1xx.o"
+--strict --scatter "light\light.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "light.map" -o light\light.axf
