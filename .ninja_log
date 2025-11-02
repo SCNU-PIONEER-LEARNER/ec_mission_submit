@@ -1,0 +1,20 @@
+# ninja log v5
+19	101	7837512973607063	CMakeFiles/ttt.dir/startup_stm32f103xb.s.obj	b6a4ce154cf73c85
+47	331	7837512975922717	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj	c1284945e95baf9c
+14	213	7837512974722365	CMakeFiles/ttt.dir/Core/Src/sysmem.c.obj	a5413e2733dd3280
+6	180	7837512974402389	CMakeFiles/ttt.dir/Core/Src/main.c.obj	24089cc497a5b68d
+11	230	7837512974902438	CMakeFiles/ttt.dir/Core/Src/stm32f1xx_hal_msp.c.obj	59483c8f5e6f32a1
+9	208	7837512974682408	CMakeFiles/ttt.dir/Core/Src/stm32f1xx_it.c.obj	8cca3b52e3d9e509
+54	322	7837512975827616	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj	17df3a8e65036a0b
+51	255	7837512975117575	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj	e5df129cae071bba
+32	255	7837512975077568	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj	4d37fcb4145aee32
+22	282	7837512975287578	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj	34c106ce038b3e28
+28	283	7837512975347589	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj	672f03adb7a621f7
+25	295	7837512975507595	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj	56e7d23980d170c6
+17	287	7837512975467568	CMakeFiles/ttt.dir/Core/Src/syscalls.c.obj	df70183d81572375
+35	295	7837512975507595	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj	7d09345f5486f9cc
+42	304	7837512975647587	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj	6a21d40a80012e70
+58	320	7837512975827616	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj	a79b87655dae1a6c
+39	320	7837512975817691	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj	6e99ff03bb912c4e
+63	322	7837512975827616	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj	8aa1c9bc79ab6904
+331	452	7837512977013316	ttt.elf	937a7f037b9d0515
