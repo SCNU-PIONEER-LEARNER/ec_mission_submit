@@ -1,0 +1,6 @@
+build/
+.vscode/
+.settings/
+.gitignore/
+openocd.cfg
+*.bin
