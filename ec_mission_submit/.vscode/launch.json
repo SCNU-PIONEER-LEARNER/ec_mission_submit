@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "showDevDebugOutput": "none",
+      "cwd": "${workspaceFolder}",
+      "executable": "./build/test1.elf",
+      "serverpath":"D:\\OpenOCD-20250710-0.12.0\\bin\\openocd.exe",
+      "name": "dap",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32f1x.cfg"
+      ],
+      "liveWatch": {
+        "enabled": true,
+        "samplesPerSecond": 1
+      },
+      "searchDir": ["d:\\OpenOCD-20250710-0.12.0\\share\\openocd\\scripts"]
+    }
+  ]
+}
