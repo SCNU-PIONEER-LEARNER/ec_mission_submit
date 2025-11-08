@@ -279,7 +279,7 @@ Resetting Target
       "servertype": "openocd",
       "configFiles": [
         "interface/cmsis-dap.cfg",
-        "target/stm32f4x.cfg"
+        "target/stm32f1x.cfg"
       ],
       "liveWatch": {
         "enabled": true,
