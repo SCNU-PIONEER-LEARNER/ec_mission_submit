@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/stm32xiangmu/test/build/cmake_install.cmake",
-		"D:/stm32xiangmu/test/build/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
