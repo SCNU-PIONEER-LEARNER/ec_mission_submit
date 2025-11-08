@@ -8,5 +8,7 @@
 ### 第二次培训
 [install](https://github.com/SCNU-PIONEER-LEARNER/ec_mission_submit/blob/master/install.md)
 
+[arm-toolchain](https://github.com/SCNU-PIONEER-LEARNER/ec_mission_submit/blob/master/arm-toolchain.pdf)
+
 
 
