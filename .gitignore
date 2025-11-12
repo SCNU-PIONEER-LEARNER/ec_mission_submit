@@ -1,0 +1,6 @@
+build/
+
+.cache/
+
+.vscode/launch.json
+*/*.log
