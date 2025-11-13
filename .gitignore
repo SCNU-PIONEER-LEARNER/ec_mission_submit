@@ -1,6 +1,9 @@
 build/
 
 .cache/
+.vscode/
+
+*.code-workspace
 
 .vscode/launch.json
 */*.log
