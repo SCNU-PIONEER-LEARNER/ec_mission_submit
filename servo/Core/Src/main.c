@@ -22,8 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include <math.h>
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -126,7 +124,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
       /*接收到数据*/
-    if(rxdata_count > 6)
+    if (rxdata_count > 6)
     {
       if(rxbuffer[0] == command[0]&&
          rxbuffer[1] == command[1]&&
@@ -137,13 +135,18 @@ int main(void)
          {
           for(int i = 6; i < rxdata_count; i++)
           {
-            angle_raw += pow(10, rxdata_count - i - 1) * (rxbuffer[i] - '0');
+            if('0' <= rxbuffer[i] && rxbuffer[i] <= '9'){ 
+            angle_raw = angle_raw * 10 + (rxbuffer[i] - '0');
+            }
           }
-          /*pwm值计算*/
-          pwm_value = (int)(angle_raw * 100/9 + 500);
-          /*设置pwm值*/
-          __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pwm_value);
-          /*清除数据*/
+          /*舵机保护*/
+          if(angle_raw < 0) angle_raw = 0;
+            if(angle_raw > 180) angle_raw = 180;
+           /*pwm值计算*/
+           pwm_value = (int)(angle_raw *2000/180 + 500);
+            /*设置pwm值*/
+            __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pwm_value);
+           /*清除数据*/
           angle_raw = 0;
           rxdata_count = 0;
          }
