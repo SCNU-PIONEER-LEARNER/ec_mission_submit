@@ -18,7 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+<<<<<<< HEAD
 #include <stm32f1xx_hal_rcc.h>
+=======
+>>>>>>> daf7c92d0a58d1e28d9480288ad2e2df910a3d0f
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -42,9 +45,12 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+<<<<<<< HEAD
 uint8_t uart_rx_buf[10] = {0};  // 串口接收缓冲区（存储VOFA+发送的字符串）
 uint8_t uart_rx_idx = 0;        // 接收索引
 uint8_t uart_rx_flag = 0;       // 接收完成标志（1=接收成功）
+=======
+>>>>>>> daf7c92d0a58d1e28d9480288ad2e2df910a3d0f
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,6 +93,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   /* USER CODE BEGIN 2 */
+<<<<<<< HEAD
   HAL_TIM_Encoder_Start(&htim1,TIM_CHANNEL_ALL);
   HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_4);
   int count=0;
@@ -94,12 +101,16 @@ int main(void)
 
   // 开启USART1中断接收（每次接收1个字节，循环接收）
   HAL_UART_Receive_IT(&huart1, &uart_rx_buf[uart_rx_idx], 1);
+=======
+
+>>>>>>> daf7c92d0a58d1e28d9480288ad2e2df910a3d0f
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+<<<<<<< HEAD
       // 若串口接收完成（VOFA+发送了数据）
     if (uart_rx_flag == 1)
     {
@@ -117,6 +128,8 @@ int main(void)
     __HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_4, duty);
 
     HAL_Delay(10);
+=======
+>>>>>>> daf7c92d0a58d1e28d9480288ad2e2df910a3d0f
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -161,6 +174,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+<<<<<<< HEAD
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if (huart == &huart1)  // 确认是USART1接收
@@ -180,6 +194,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     HAL_UART_Receive_IT(&huart1, &uart_rx_buf[uart_rx_idx], 1);
   }
 }
+=======
+>>>>>>> daf7c92d0a58d1e28d9480288ad2e2df910a3d0f
 /* USER CODE END 4 */
 
 /**

@@ -19,7 +19,11 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 include(cmake/gcc-arm-none-eabi.cmake)
 # Set the project name
+<<<<<<< HEAD
 set(CMAKE_PROJECT_NAME duoji2)
+=======
+set(CMAKE_PROJECT_NAME test)
+>>>>>>> daf7c92d0a58d1e28d9480288ad2e2df910a3d0f
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
