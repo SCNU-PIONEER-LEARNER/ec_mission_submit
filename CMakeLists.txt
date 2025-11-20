@@ -17,7 +17,7 @@ set(CMAKE_C_EXTENSIONS ON)
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
-
+include(cmake/gcc-arm-none-eabi.cmake)
 # Set the project name
 set(CMAKE_PROJECT_NAME duoji2)
 
