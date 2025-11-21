@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "STM32",
+      "compileCommands": [
+        "${workspaceFolder}/build/Debug/compile_commands.json"
+      ],
+      "intelliSenseMode": "windows-msvc-x64",
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE",
+        "USE_HAL_DRIVER",
+        "STM32F103xx"
+      ],
+      "cStandard": "c17",
+      "cppStandard": "gnu++17",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${default}",
+        "${workspaceFolder}/Core/Inc",
+        "${workspaceFolder}/Drivers/STM32F1xx_HAL_Driver/Inc",
+        "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
+      ]
+    }
+  ],
+  "version": 4
+}

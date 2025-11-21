@@ -1,0 +1,81 @@
+#include "App.hpp"
+#include "DmImu.hpp"
+#include "Motors.hpp"
+#include "Pid.hpp"
+#include "CalcuNeed.hpp"
+#include "can.h"
+#include "stm32f4xx_hal_can.h"
+#include <cstdint>
+#include <cstdlib>
+
+MOTORS::Motors *motor3508;
+MOTORS::Motors *motor6020;
+DM_IMU::DmImu *dmImu;
+PID::Pid *motorPosPid;
+PID::Pid *motorVelPid;
+
+int16_t current = 0; // GM6020: [-16384, 16384]
+uint8_t data[8];
+
+float torgetVel = 0.0f;
+float reqCurrent = 0.0f; // GM6020: [-3.0, 3.0]
+float expectPos = 0.0f;  // rad, [0, 2PI)
+uint16_t posCnt = 0;
+
+IIR3 filter;
+
+void App::initApp()
+{
+    motor6020 = new MOTORS::Motors(5, 0x204, 0x2FE);
+    motor3508 = new MOTORS::Motors(3, 0x200, 0x200);
+    dmImu = new DM_IMU::DmImu(&hcan2, 0x01, 0x11, 0x6FF);
+    motorPosPid = new PID::Pid(5.0f, 0.0f, 0.0f, 1 / 1000.f);
+    motorVelPid = new PID::Pid(0.03f, 0.001f, 0.00007f, 1 / 1000.f);
+    torgetVel = 0.0f;
+    reqCurrent = 0.0f;
+    expectPos = 0.0f;
+    posCnt = 0;
+}
+
+void App::sendCanData()
+{
+    data[0] = current >> 8;
+    data[1] = current;
+    data[2] = current >> 8;
+    data[3] = current;
+    data[4] = current >> 8;
+    data[5] = current;
+    data[6] = current >> 8;
+    data[7] = current;
+    if (motor3508 != nullptr && motor6020 != nullptr) {
+        motor3508->sendData(data);
+        motor6020->sendData(data);
+    }
+    dmImu->sendRequest(0x03);
+}
+
+void App::getCanData()
+{
+    if (motor3508 != nullptr && motor6020 != nullptr) {
+        motor6020->getData();
+        motor3508->getData();
+    }
+    if (dmImu != nullptr) {
+        dmImu->getData();
+    }
+}
+
+void App::motorCtrl()
+{
+    posCnt >= 1000 ?
+            (expectPos += (expectPos >= 2 * M_PI) ? -2 * M_PI : M_PI / 3.f,
+             posCnt = 0) :
+            posCnt++;
+}
+
+
+void sendCanData() { App::instance()->sendCanData(); }
+
+void getCanData() { App::instance()->getCanData(); }
+
+void motorCtrl() { App::instance()->motorCtrl(); }
