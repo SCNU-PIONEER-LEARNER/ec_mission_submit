@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build",
+            "dependsOn": [
+                "cmake"
+            ],
+            "command": "ninja -C 'build'",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "detail": "make...",
+            "problemMatcher": []
+        },
+    ]
+}
