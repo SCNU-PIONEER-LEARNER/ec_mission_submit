@@ -158,7 +158,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         getCanData();
     }
     if (htim == &htim3) {
-        motorCtrl();
         sendCanData();
     }
 }
