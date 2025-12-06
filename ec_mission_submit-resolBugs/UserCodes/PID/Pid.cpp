@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cstdint>
 #include <cmath>
 #include "Pid.hpp"
@@ -17,7 +18,9 @@ float Pid::calc(float _ref, float _cur)
 
     err[0] = _ref - _cur;
 
-    iOut += Ki * err[0] * dt;
+    iOut += Ki * err[0] * dt;//是否积分限幅？
+    iOut = std::min(iOut, 1000.0f);
+    iOut = std::max(iOut, -1000.0f);
 
     return (Kp * err[0]) + iOut + (Kd * (err[0] - err[1]) / dt);
 }
