@@ -5,6 +5,7 @@
 
 void CanMotors::bspInit()
 {
+    BspCan::instance().init(&hcan1);
     BspCan::instance().init(&hcan2);
 }
 

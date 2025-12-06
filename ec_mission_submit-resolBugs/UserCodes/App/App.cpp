@@ -27,6 +27,7 @@ IIR3 filter;
 void App::initApp()
 {
     motor3508 = new MOTORS::Motors(3, 0x200, 0x200);
+    motor6020 = new MOTORS::Motors(5, 0x204, 0x2FE);
     dmImu = new DM_IMU::DmImu(&hcan2, 0x01, 0x11, 0x6FF);
     motorPosPid = new PID::Pid(5.0f, 0.0f, 0.0f, 1 / 1000.f);
     motorVelPid = new PID::Pid(0.00003f, 0.f, 0.f, 1 / 1000.f);
@@ -100,3 +101,5 @@ void sendCanData() { App::instance()->sendCanData(); }
 void getCanData() { App::instance()->getCanData(); }
 
 void motorCtrl() { App::instance()->motorCtrl(); }
+
+void motorVelCtrl() { App::instance()->motorVelCtrl(); }

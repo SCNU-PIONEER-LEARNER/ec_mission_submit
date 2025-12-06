@@ -28,11 +28,11 @@ void Motors::getData()
     uint8_t index = stdid - _feedbackIdBase; // get motor index by can_id
     if (index == _id) {
         _canCnt++;
-        _datas.angle = ((rxData[1] << 8) | rxData[0]);
+        _datas.angle = ((rxData[0] << 8) | rxData[1]);
         _datas.speed = static_cast<int16_t>(
-                (static_cast<uint16_t>((rxData[3] << 8) | rxData[2])));
+                (static_cast<uint16_t>((rxData[2] << 8) | rxData[3])));
         _datas.torqueCurrent = static_cast<int16_t>(
-                (static_cast<uint16_t>((rxData[5] << 8) | rxData[4])));
+                (static_cast<uint16_t>((rxData[4] << 8) | rxData[5])));
         _datas.temp = rxData[6];
     }
 
