@@ -68,18 +68,22 @@ void App::getCanData()
 
 void App::motorCtrl()
 {
-    if (std::abs(get_minor_arc(motor6020->_realDatas.angle, expectPos,
-                               2 * M_PI)) < 0.05f) {
+    if (std::abs(get_minor_arc(motor6020->_realDatas.angle, expectPos, 2 * M_PI)) < 0.05f) {
         current = 0;
     } else {
         torgetVel = motorPosPid->calc(
-                get_minor_arc(expectPos, motor6020->_realDatas.angle, 2 * M_PI),
-                0.0f);
+            get_minor_arc(expectPos, motor6020->_realDatas.angle, 2 * M_PI),
+            0.0f);
         reqCurrent = motorVelPid->calc(
-                torgetVel, filter.process(motor6020->_realDatas.speed));
+            torgetVel, filter.process(motor6020->_realDatas.speed));
+        if (reqCurrent > 3.0f)
+            reqCurrent = 3.0f;
+        else if (reqCurrent < -3.0f)
+            reqCurrent = -3.0f;
 
         current = (int16_t)(reqCurrent / 3.0f * 16384);
     }
+
 
     posCnt >= 1000 ?
             (expectPos += (expectPos >= 2 * M_PI) ? -2 * M_PI : M_PI / 3.f,
