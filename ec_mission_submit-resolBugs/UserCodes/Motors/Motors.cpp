@@ -59,4 +59,5 @@ void Motors::getData()
     }
     _realDatas.angle = (float)((float)_datas.angle / 8192.0f * 2 *
                                M_PI); // abs angle range:[0,2PI]
+    _realDatas.speed = (float)_datas.speed / 8192.0f * 320.f;
 }
