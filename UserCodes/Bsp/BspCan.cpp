@@ -40,14 +40,14 @@ HAL_StatusTypeDef BspCan::canFilterInit(CAN_HandleTypeDef *_hcan,
 {
     HAL_StatusTypeDef result = HAL_OK;
     CAN_FilterTypeDef canFilterStructure;
-    canFilterStructure.FilterActivation = ENABLE;
+    canFilterStructure.FilterActivation = false;
     canFilterStructure.FilterMode = CAN_FILTERMODE_IDMASK;
     canFilterStructure.FilterScale = CAN_FILTERSCALE_32BIT;
     canFilterStructure.FilterFIFOAssignment = _fifo;
-    canFilterStructure.FilterIdHigh = 0xFFFF;
-    canFilterStructure.FilterIdLow = 0xFFFF;
-    canFilterStructure.FilterMaskIdHigh = 0x0000;
-    canFilterStructure.FilterMaskIdLow = 0x0000;
+    canFilterStructure.FilterIdHigh = 0x0000;
+    canFilterStructure.FilterIdLow = 0x0000;
+    canFilterStructure.FilterMaskIdHigh = 0xFFFF;
+    canFilterStructure.FilterMaskIdLow = 0xFFFF;
     if (_hcan == &hcan1) {
         canFilterStructure.FilterBank = 0;
     } else if (_hcan == &hcan2) {

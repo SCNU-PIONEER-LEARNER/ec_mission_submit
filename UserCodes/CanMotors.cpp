@@ -13,7 +13,6 @@ void CanMotors::coreInit() { App::instance()->initApp(); }
 void CanMotors::init()
 {
     bspInit();
-    coreInit();
 }
 
 void initCanMotors() { CanMotors::instance()->init(); }
