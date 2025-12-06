@@ -22,13 +22,13 @@ float Pid::calc(float _ref, float _cur)
     return (Kp * err[0]) + iOut + (Kd * (err[0] - err[1]) / dt);
 }
 
-float Pid::dualCalcu(float _expPos, float _curPos, float _curVel)
-{
-    float torque;
-    float expVel;
-    expVel = Pid::calc(_expPos, _curPos);
-    torque = Pid::calc(expVel, _curVel);
-    return torque;
-}
+// float Pid::dualCalcu(float _expPos, float _curPos, float _curVel)//这个函数使用了同一个PID对象的参数
+// {
+//     float torque;
+//     float expVel;
+//     expVel = Pid::calc(_expPos, _curPos);
+//     torque = Pid::calc(expVel, _curVel);
+//     return torque;
+// }
 
 } // namespace PID

@@ -69,7 +69,7 @@ void App::getCanData()
 void App::motorCtrl()
 {
     if (std::abs(get_minor_arc(motor6020->_realDatas.angle, expectPos, 2 * M_PI)) < 0.05f) {
-        current = 0;
+        current = 0;//在目标位置附近产生震荡
     } else {
         torgetVel = motorPosPid->calc(
             get_minor_arc(expectPos, motor6020->_realDatas.angle, 2 * M_PI),
@@ -91,13 +91,13 @@ void App::motorCtrl()
             posCnt++;
 }
 
-void App::motorVelCtrl()
-{
-    reqCurrent = motorVelPid->calc(torgetVel,
-                                   filter.process(motor6020->_realDatas.speed));
+// void App::motorVelCtrl()
+// {
+//     reqCurrent = motorVelPid->calc(torgetVel,
+//                                    filter.process(motor6020->_realDatas.speed));
 
-    current = (int16_t)(reqCurrent / 3.0f * 16384);
-}
+//     current = (int16_t)(reqCurrent / 3.0f * 16384);
+// }//何意味
 
 
 void sendCanData() { App::instance()->sendCanData(); }
