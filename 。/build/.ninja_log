@@ -1,0 +1,20 @@
+# ninja log v7
+33	94	7837557040029821	CMakeFiles/QWE.dir/startup_stm32f103xb.s.obj	39d1f31404e5680
+24	111	7837557039945510	CMakeFiles/QWE.dir/Core/Src/sysmem.c.obj	347877a79d84795d
+28	136	7837557039977384	CMakeFiles/QWE.dir/Core/Src/syscalls.c.obj	654b3f396738d87e
+15	188	7837557039814091	CMakeFiles/QWE.dir/Core/Src/main.c.obj	da49bcbf9dd60890
+19	189	7837557039880601	CMakeFiles/QWE.dir/Core/Src/stm32f1xx_it.c.obj	fa5878995ae4ddee
+22	205	7837557039880601	CMakeFiles/QWE.dir/Core/Src/stm32f1xx_hal_msp.c.obj	e98b95d85187a737
+40	223	7837557040105750	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj	ed4d60faa1a16fce
+36	227	7837557040029821	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f1xx.c.obj	bc2606a57d94ebb0
+45	248	7837557040145749	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj	4215e59923f23825
+54	250	7837557040233929	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj	7238439a2b557bcb
+59	259	7837557040292420	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj	ec3c6039bb143ef7
+49	264	7837557040187104	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj	828b9f5df8d547c7
+70	267	7837557040372575	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj	7b3619fb034caed2
+74	268	7837557040442644	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj	92ba5b0b44d265b6
+64	275	7837557040336537	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj	d4207af3983cb6d8
+78	279	7837557040472655	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj	7b56e96f0fc144a2
+89	281	7837557040583873	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj	a3db22ace4d38260
+83	282	7837557040524750	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj	6c7801a6b3c98d61
+282	369	7837557042456091	QWE.elf	62510068c8b7e53a
