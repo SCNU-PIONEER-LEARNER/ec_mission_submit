@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "showDevDebugOutput": "none",
+      "cwd": "${workspaceFolder}",
+      "executable": "./build/Debug/.elf",//改成你的可执行文件路径
+      "name": "dap",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "device": "STM32F407",//改成你的目标设备型号
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "liveWatch": {
+        "enabled": true,
+        "samplesPerSecond": 1
+      }
+    }
+  ]
+}

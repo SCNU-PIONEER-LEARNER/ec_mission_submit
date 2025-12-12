@@ -20,13 +20,7 @@ HAL_StatusTypeDef BspCan::transmitData(CAN_HandleTypeDef *_hcan,
                                        uint32_t _len) {
   CAN_TxHeaderTypeDef txHeader;
   uint32_t canMailbox;
-  txHeader.DLC = _len;//数据长度
-  txHeader.IDE = CAN_ID_STD;//帧格式
-  txHeader.RTR = CAN_RTR_DATA;//帧类型
-  txHeader.StdId = _stdid;//数据id
-  txHeader.TransmitGlobalTime = DISABLE;//使不能全局时间戳
-  /*异步发送*/
-  return HAL_CAN_AddTxMessage(_hcan, &txHeader, _txData, &canMailbox);
+  // return HAL_CAN_AddTxMessage();
 }
 
 HAL_StatusTypeDef BspCan::canFilterInit(CAN_HandleTypeDef *_hcan,
@@ -36,14 +30,6 @@ HAL_StatusTypeDef BspCan::canFilterInit(CAN_HandleTypeDef *_hcan,
 
   if (_hcan == &hcan1) {
     canFilterStructure.FilterBank = 0;
-    canFilterStructure.FilterIdHigh = 0x0000;
-    canFilterStructure.FilterIdLow = 0x0000;
-    canFilterStructure.FilterMaskIdLow = 0x0000;
-    canFilterStructure.FilterMaskIdHigh = 0x0000;
-    canFilterStructure.FilterFIFOAssignment = _fifo;
-    canFilterStructure.FilterMode = CAN_FILTERMODE_IDMASK;
-    canFilterStructure.FilterScale = CAN_FILTERSCALE_32BIT;
-    canFilterStructure.FilterActivation = ENABLE;
   }
   result = HAL_CAN_ConfigFilter(_hcan, &canFilterStructure);
   if (_fifo == 0) {

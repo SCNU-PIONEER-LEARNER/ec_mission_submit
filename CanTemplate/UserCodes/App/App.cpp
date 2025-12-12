@@ -9,7 +9,7 @@ DM_IMU::DmImu *dmImu;
 uint16_t current = 0; // 0 - 65535
 uint8_t data[8];
 void App::initApp() {
-  motor = new MOTORS::Motors(1, 0x204, 0x1FE);
+  // motor = new MOTORS::Motors();
   // dmImu = new DM_IMU::DmImu();
 }
 
