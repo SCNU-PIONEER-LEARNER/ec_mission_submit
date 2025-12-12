@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/LENOVO/Desktop/RTOS3/build/cmake_install.cmake",
+		"C:/Users/LENOVO/Desktop/RTOS3/build/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
