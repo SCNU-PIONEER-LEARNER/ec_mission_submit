@@ -1,0 +1,7 @@
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/CMakeFiles/Base_Task_FreeRTOS.dir
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/CMakeFiles/edit_cache.dir
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/CMakeFiles/rebuild_cache.dir
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+D:/Desktop/fork/TASK_submit/Freertos_basic/build/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
