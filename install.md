@@ -93,7 +93,7 @@ npm config set https-proxy http://127.0.0.1:7890
 接下来是终端命令行安装
 1. kconfiglib
 ```
-pip3 install windows-cursers
+pip3 install windows-curses
 pip3 install kconfiglib
 ```
 2. choco 
