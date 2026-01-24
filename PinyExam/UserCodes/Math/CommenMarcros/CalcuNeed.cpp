@@ -65,3 +65,13 @@ float rangeMap(float _scale, float _min, float _max)
     float rslt = offset + _min;
     return rslt;
 }
+uint16_t float2uint(float _xInt, float _xMin, float _xMax,
+                                  int _bits)
+{
+    /// Converts a float to an unsigned int, given range and number of _bits ///
+    float span = _xMax - _xMin;
+    float offset = _xMin;
+    uint16_t rawSet =
+            (uint16_t)((_xInt - offset) * ((float)((1 << _bits) - 1)) / span);
+    return rawSet;
+}

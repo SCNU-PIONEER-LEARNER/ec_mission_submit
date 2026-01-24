@@ -20,8 +20,10 @@ struct MotorCtrl_s {
 class Gimbal {
     static constexpr float PITCH_RAD_MIN_ANG = -0.49f;
     static constexpr float PITCH_RAD_MAX_ANG = 0.32f;
+    static constexpr float YAW_CENTER_ANG = 0.f;
+
 public:
-    Gimbal(QueueHandle_t _insDataQueue);
+    Gimbal(QueueHandle_t _insDataQueue, QueueHandle_t _yawPosQueue);
 
     void ctrl();
     void yawCtrl();
@@ -29,6 +31,12 @@ public:
     void update();
 
 private:
+    Motors_u motors_;
+    MotorCtrl_s yawPosPid_;
+    MotorCtrl_s yawVelPid_;
+    MotorCtrl_s pitchPosPid_;
+    MotorCtrl_s pitchVelPid_;
+
     float cmdYaw_;
     float cmdPitch_;
     float curYaw_;
@@ -38,6 +46,8 @@ private:
     float curPitchVel_;
 
     QueueHandle_t insDataQueue_;
+    QueueHandle_t yawPosQueue_;
+    float yawPos_;
     INS_SYS::INSData_s insDat_;
 
     IIR3 yawFilter_;

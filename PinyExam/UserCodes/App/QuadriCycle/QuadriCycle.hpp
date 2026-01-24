@@ -1,4 +1,5 @@
 #pragma once
+#include "DmImu.hpp"
 #include "Motors.hpp"
 #include "Pid.hpp"
 #include "CalcuNeed.hpp"
@@ -53,7 +54,7 @@ public:
         MENUCAM,
     };
 
-    QuadriCycle(ChassisType_e _chassisType);
+    QuadriCycle(ChassisType_e _chassisType, QueueHandle_t _yawPosQueue);
 
     void ctrl();
     void motorCtrl();
@@ -62,12 +63,18 @@ public:
     void update();
 
 private:
+    Motors_u motors_;
     WheelsSpeed_u expWheels;
     WheelsSpeed_u curWheels;
     Speed_u curSpeed_;
 
+    MotorCtrl_s velPid_[4];
+
     IIR3 iirFilter[4];
     ChassisType_e chassisType_;
+
+    QueueHandle_t yawPosQueue_;
+    float yawPos_ = 0.f;
 };
 
 } // namespace QUADRICYCLE
