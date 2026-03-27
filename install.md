@@ -79,7 +79,7 @@ npm config set https-proxy http://127.0.0.1:7890
 3. [Python 3.8.10](https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe)
 	1. 勾选 `Add python 3.8 to PATH`
 	2. `python --version` 查看是否有输出版本
-4. [arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64](https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip) (需要手动配置全局环境变量)
+4. [arm-gnu-toolchain-15.2.rel1-mingw-w64-x86_64](https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-mingw-w64-x86_64-arm-none-eabi.zip) (需要手动配置全局环境变量)
 	1. `arm-none-eabi-gcc -v` 查看是否有输出
 5. [Ozone_Windows_V3.24b](https://www.segger.com/downloads/jlink/Ozone_Windows_V324b_x64.exe)
 	1. 勾选 `Install a new instance`
@@ -149,7 +149,7 @@ npm install -g commitizen
 	2. clangd
 	3. clang-format
 	4. rtos-views
-3. [arm-gnu-toolchain-14.3.rel1-x86_64](https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz) (需要手动配置全局环境变量, 把解压后的文件路径...\bin 填入 PATH)
+3. [arm-gnu-toolchain-14.3.rel1-x86_64](https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi.tar.xz) (需要手动配置全局环境变量, 把解压后的文件路径...\bin 填入 PATH)
 	1. `arm-none-eabi-gcc -v` 查看是否有输出
 4. [Ozone_Linux_V3.24b](https://www.segger.com/downloads/jlink/Ozone_Linux_V324b_x86_64.tgz)
 	1. 勾选 `Install a new instance`
