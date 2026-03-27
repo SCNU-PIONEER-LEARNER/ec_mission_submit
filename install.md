@@ -209,6 +209,7 @@ sudo apt install clangd-20
 ---
 安装参考
 [stm32\_dev\_env/how\_to\_install.md](https://github.com/TongjiSuperPower/stm32_dev_env/blob/main/how_to_install.md)
+不要下载CLT!!!那只是个参考!!!
 
 [basic\_framework/.Doc/VSCode+Ozone使用方法.md](https://github.com/HNUYueLuRM/basic_framework/blob/master/.Doc/VSCode+Ozone%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.md)
 
