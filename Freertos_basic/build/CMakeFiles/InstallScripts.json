@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/Desktop/fork/TASK_submit/Freertos_basic/build/cmake_install.cmake",
+		"D:/Desktop/fork/TASK_submit/Freertos_basic/build/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
